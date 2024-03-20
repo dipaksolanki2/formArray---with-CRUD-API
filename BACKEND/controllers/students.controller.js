@@ -48,7 +48,7 @@ const deleteStudent = async (request, h) => {
   try {
     const { params } = request;
 
-    console.log(params);
+    // console.log(params);
 
     await StudentModel.deleteOne({
       _id : new ObjectId(params._id),
@@ -81,7 +81,7 @@ const updateStudent = async (request, h) => {
 
     //? const { studentName, rollNo, standard, examType, subjectName } = request.payload;
 
-    console.log(_id);
+    // console.log(_id);
     await StudentModel.findByIdAndUpdate(_id, request.payload);
 
     return h.response({ message: "Student updated successfully" }).code(200);
