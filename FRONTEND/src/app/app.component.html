@@ -72,10 +72,10 @@
       <p><strong>Exams:</strong></p>
       <ul>
         <li *ngFor="let exam of student.exams;">
-          {{ exam.examType }}
+          {{ exam.examType.length > 0 ? exam.examType : 'No Exams'}}
           <ul>
             <li *ngFor="let subject of exam.subjects">
-              {{ subject.subjectName }}
+              {{ subject.subjectName.length > 0 ? subject.subjectName : 'No Subject'}}
             </li>
           </ul>
         </li>
